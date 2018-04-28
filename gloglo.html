@@ -1,21 +1,23 @@
-<script src="https://content.jwplatform.com/libraries/zkpZNdwa.js"></script>
-<div id='playerBLiyUVVsMPRD'></div>
-<script type="text/javascript">
-    var player = jwplayer('playerBLiyUVVsMPRD');
-        jwplayer("playerBLiyUVVsMPRD").setup({
-            file: "http://painel1.diamanteiptv.top:25461/live/Ojt65HjXdu/EagtV8qEkg/14279.m3u8",
-            image: "../../img/sportv.png",
-            autostart: true,
-            hlshtml: true,
-            width: '640',
-            height: '360',
-            logo: {
-            },
-            skin: {
-                name: "seven"
-            }
-        });
-    </script>
-
-
-<script src="https://apis.google.com/js/platform.js"></script>
+  <title>Clappr Player</title>
+  <meta charset="UTF-8">
+  <!-- Player -->
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/clappr/0.2.86/clappr.min.js"></script>
+  <!-- Stats -->
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/clappr-stats/dist/clappr-stats.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/clappr-nerd-stats/dist/clappr-nerd-stats.min.js"></script>
+</head>
+<body>
+  <div id="player"></div>
+  <script>
+    var player = new Clappr.Player({
+      source: "http://painel1.diamanteiptv.top:25461/live/Ojt65HjXdu/EagtV8qEkg/14279.m3u8",
+      parentId: "#player",
+      plugins: [ClapprNerdStats, ClapprStats],
+      width: '100%',
+      height: '100%',
+      clapprNerdStats: {
+        shortcut: ['command+shift+s', 'ctrl+shift+s'],
+        iconPosition: 'top-right' // Values: 'top-right', 'top-left', 'bottom-right', 'bottom-left', 'none'
+      }
+    });
+  </script>
